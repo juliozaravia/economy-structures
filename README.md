@@ -197,3 +197,45 @@
     "end_date": "2021-05-30 05:23:16.667-05",
 }
 ```
+
+## 4. Employees.
+
+**GET** `localhost:3001/api/bo/employee`
+
+```json
+    {
+        "id": 2,
+        "first_name": "Ashleigh",
+        "last_name": "Cruickshank",
+        "email": "Guido_Fay@hotmail.com",
+        "rol_id": 1,
+        "rol_name": "Administrator",
+        "permissions": [
+            {
+                "name": "Create",
+                "id_code": 12,
+                "status": true
+            },
+            {
+                "name": "Edit",
+                "id_code": 23,
+                "status": true
+            },
+            {
+                "name": "Delete",
+                "id_code": 34,
+                "status": true
+            }
+        ]
+    }
+```
+
+**POST** `localhost:3001/api/bo/employee/add`
+
+```json
+{
+    "user_id": 1, //debe ser el mismo que employee_id
+    "rol_id": 2,
+    "employee_id": 1 //debe ser el mismo que user_id
+}
+```
